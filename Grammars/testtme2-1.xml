@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<programme1>
+	<affectation >
+		 <variable nom = 'c'/> 
+		<valeur>
+			<entier valeur = '52' />
+		</valeur>
+	 </affectation>	
+	 
+	 <invocationPrimitive fonction='print'>
+	 	<variable nom = 'c'/>
+	 </invocationPrimitive>		
+</programme1>

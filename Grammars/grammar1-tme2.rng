@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<grammar xmlns="http://relaxng.org/ns/structure/1.0" datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes">
+  <include href="grammar1rng"/>
+  <!--
+    Une affectation est un nom de variable 
+    et une expression .Ainsi le nom de variable 
+    reference l'expression
+  -->
+  <define name="affectation">
+    <element name="affectation">
+      <attribute name="nom">
+        <data type="Name"/>
+      </attribute>
+      <element name="valeur">
+        <ref name="expression"/>
+      </element>
+    </element>
+  </define>
+  <!--
+    Boucle 
+    
+    
+  -->
+  <define name="boucle">
+    <element name="boucle">
+      <element name="initialisation">
+        <ref name="affectation"/>
+      </element>
+      <element name="condition">
+        <ref name="alternative"/>
+      </element>
+    </element>
+  </define>
+</grammar>
+<!-- fin. -->

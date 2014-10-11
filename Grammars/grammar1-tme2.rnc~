@@ -1,0 +1,27 @@
+include "grammar1.rnc"
+
+
+instruction |= affectetion
+
+
+# Une affectation est un nom de variable 
+# et une expression .Ainsi le nom de variable 
+# reference l'expression
+
+
+affectation =
+  element affectation {
+   variable,
+   element valeur 	{ expression }
+}
+
+# Boucle 
+#
+#
+
+boucle = 
+       element boucle {
+       element initialisation {affectation},
+       element condition {alternative}
+       }
+# fin.
