@@ -1,4 +1,4 @@
-/* Fichier compilé vers C */
+/* Fichier compil?? vers C */
 #include <stdio.h>
 #include <stdlib.h>
 

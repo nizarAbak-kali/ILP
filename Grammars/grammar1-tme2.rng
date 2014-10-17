@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<grammar xmlns="http://relaxng.org/ns/structure/1.0" datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes">
+<grammar xmlns="http://relaxng.org/ns/structure/1.0">
   <include href="grammar1rng"/>
+  <define name="instruction" combine="choice">
+    <ref name="affectetion"/>
+  </define>
   <!--
     Une affectation est un nom de variable 
     et une expression .Ainsi le nom de variable 
@@ -8,9 +11,7 @@
   -->
   <define name="affectation">
     <element name="affectation">
-      <attribute name="nom">
-        <data type="Name"/>
-      </attribute>
+      <ref name="variable"/>
       <element name="valeur">
         <ref name="expression"/>
       </element>
